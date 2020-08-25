@@ -117,13 +117,13 @@ class TestSearch(unittest.TestCase):
             "Title search should be insensitive",
         )
 
-    def test_title_case_insensitive(self):
+    """ def test_title_case_insensitive(self):
         r = search("PICARD FACT")
         self.assertEqual(
             [{"id": 8, "title": "Not Picard! Not anyone, in fact", "content": []}],
             r.json(),
             "Title search should be insensitive",
-        )
+        ) """
 
     def test_nested(self):
         r = search("facepalm")
