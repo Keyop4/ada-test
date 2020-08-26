@@ -5,7 +5,10 @@ import re # regular expressions
 from pprint import pprint
 
 """ My solution requires the json1 extension for sqlite3
-I expect the dataset to fit into memory, otherwise my solution would not work.  
+I expect the dataset to fit into memory, otherwise my solution would not work.
+In production I would limit the number of records that could be returned at one
+time by the search.  If a request were to exceed that limit, there are a number of
+ways that could be handled, depending on the business requirements.  
 I might re-architect this solution and use some combination of MVC, Repository pattern,
 an ORM, and dependecy injection.  This would make scaling up easier.  I would look at 
 whether or not an rdbms is even the right choice for data storage.  Because of the json in
